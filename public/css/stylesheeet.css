@@ -1,0 +1,42 @@
+#main {
+    background-color: #0c59cf;
+    width: 400px;
+    height: 431px;
+    margin: auto;
+}
+
+.icon-chat {
+    background-color:  white;
+}
+
+.header h1, .header div {
+    display: inline;
+}
+
+.chat-window {
+    height: 278px;
+    width: 345px;
+    background-color: white;
+    margin: 27px auto 0 auto;
+}
+
+.footer {
+    margin: auto !important;
+}
+
+/*
+.footer {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+input {
+    height: 50px;
+    width: 211px;
+}
+
+button {
+    height: 50px;
+    margin-left: 30px !important;
+}
+*/

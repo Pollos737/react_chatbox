@@ -56,11 +56,91 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(
-	    'h1',
-	    null,
-	    'Hello'
-	), document.getElementById('main'));
+	var Comment = _react2.default.createClass({
+	    displayName: 'Comment',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'comment' },
+	            'This is a comment'
+	        );
+	    }
+	});
+
+	var Search = _react2.default.createClass({
+	    displayName: 'Search',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            'Search will go here'
+	        );
+	    }
+	});
+
+	var ChatWindow = _react2.default.createClass({
+	    displayName: 'ChatWindow',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'chat-window' },
+	            _react2.default.createElement(Comment, null)
+	        );
+	    }
+	});
+
+	var Header = _react2.default.createClass({
+	    displayName: 'Header',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'header' },
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Chat Box'
+	            ),
+	            _react2.default.createElement(Search, null)
+	        );
+	    }
+	});
+
+	var Footer = _react2.default.createClass({
+	    displayName: 'Footer',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'footer row' },
+	            _react2.default.createElement('input', { type: 'text', className: 'col-md-8' }),
+	            _react2.default.createElement(
+	                'button',
+	                { className: 'btn btn-success col-md-4' },
+	                'Submit Here!'
+	            )
+	        );
+	    }
+	});
+
+	var Container = _react2.default.createClass({
+	    displayName: 'Container',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(Header, null),
+	            _react2.default.createElement(ChatWindow, null),
+	            _react2.default.createElement(Footer, null)
+	        );
+	    }
+	});
+
+	_reactDom2.default.render(_react2.default.createElement(Container, null), document.getElementById('main'));
 
 /***/ },
 /* 1 */
